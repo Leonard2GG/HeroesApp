@@ -1,10 +1,14 @@
-import { Link, NavLink } from 'react-router';
+import { Link, NavLink, Navigate, useNavigate } from 'react-router';
 
 
 export const Navbar = () => {
 
+    const navigate = useNavigate();
+
     const handleLogout = () => {
-        console.log('Logout clicked');
+        navigate('/login', {
+            replace: true
+        });
     }
     return (
         <nav className="navbar navbar-expand-sm bg-primary-subtle" data-bs-theme="dark">
