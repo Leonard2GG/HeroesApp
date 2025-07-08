@@ -2,15 +2,18 @@ import { Link, NavLink } from 'react-router';
 
 
 export const Navbar = () => {
+
+    const handleLogout = () => {
+        console.log('Logout clicked');
+    }
     return (
         <nav className="navbar navbar-expand-sm bg-primary-subtle" data-bs-theme="dark">
 
-            <a className="navbar-brand" href="#">
-                <img src="/src/assets/react.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
-            </a>
-
             <div className="navbar-collapse">
                 <div className="navbar-nav">
+                    <a className="navbar-brand" href="#">
+                        <img src="/src/assets/react.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
+                    </a>
 
                     <NavLink
                         className="nav-item nav-link"
@@ -28,16 +31,20 @@ export const Navbar = () => {
                 </div>
             </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
-                    <NavLink
-                        className="nav-item nav-link"
+
+                    <span className='nav-item nav-link text-info'>Leonardo</span>
+                    <button
+                        className="nav-item nav-link btn"
                         to="/login"
+                        onClick={handleLogout}
                     >
                         Logout
-                    </NavLink>
+                    </button>
+
                 </ul>
             </div>
-        </nav>
+        </nav >
     )
 }
