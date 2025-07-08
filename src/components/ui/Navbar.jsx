@@ -3,14 +3,11 @@ import { Link, NavLink } from 'react-router';
 
 export const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-sm bg-primary-subtle" data-bs-theme="dark">
 
-            <Link
-                className="navbar-brand"
-                to="/"
-            >
-                Asociaciones
-            </Link>
+            <a className="navbar-brand" href="#">
+                <img src="/src/assets/react.svg" alt="" width="30" height="24" className="d-inline-block align-text-top" />
+            </a>
 
             <div className="navbar-collapse">
                 <div className="navbar-nav">
