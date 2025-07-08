@@ -1,10 +1,7 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router";
 import { Navbar } from '../components/ui/Navbar';
-import MarvelScreen from '../components/marvel/MarvelScreen';
-import DCScreen from '../components/dc/DCScreen';
-import SearchScreen from '../components/search/SearchScreen';
 import LoginScreen from '../components/login/LoginScreen';
+import DashboardRoutes from './DashboardRoutes';
 
 export default function AppRouter() {
     return (
@@ -12,11 +9,8 @@ export default function AppRouter() {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path="/" element={<MarvelScreen />} />
-                    <Route path="/marvel" element={<MarvelScreen />} />
-                    <Route path="/dc" element={<DCScreen />} />
-                    <Route path="/search" element={<SearchScreen />} />
                     <Route path="/login" element={<LoginScreen />} />
+                    <Route path="/*" element={<DashboardRoutes />} />
                 </Routes>
             </BrowserRouter>
         </div>
