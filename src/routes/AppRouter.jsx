@@ -7,7 +7,7 @@ export default function AppRouter() {
         <div>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/login" element={<LoginScreen />} />
+                    <Route path="/" element={<LoginScreen />} />
                     <Route path="/*" element={<DashboardRoutes />} />
                 </Routes>
             </BrowserRouter>

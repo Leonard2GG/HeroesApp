@@ -6,7 +6,7 @@ export const Navbar = () => {
     const navigate = useNavigate();
 
     const handleLogout = () => {
-        navigate('/login', {
+        navigate('/', {
             replace: true
         });
     }
@@ -20,14 +20,20 @@ export const Navbar = () => {
                     </a>
 
                     <NavLink
-                        className="nav-item nav-link"
+                        className={({ isActive }) => {
+                            return 'nav-item nav-link' + (isActive ? ' active' : '');
+                        }
+                        }
                         to="/marvel"
                     >
                         Marvel
                     </NavLink>
 
                     <NavLink
-                        className="nav-item nav-link"
+                        className={({ isActive }) => {
+                            return 'nav-item nav-link' + (isActive ? ' active' : '');
+                        }
+                        }
                         to="/dc"
                     >
                         DC
