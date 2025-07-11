@@ -1,4 +1,4 @@
-import React from 'react'
+import { useMemo } from 'react'
 import { useParams, Navigate, useNavigate } from 'react-router'
 import { getHeroeById } from '../../helpers/getHeroesById';
 
@@ -6,7 +6,7 @@ import { getHeroeById } from '../../helpers/getHeroesById';
 export default function HeroScreen() {
 
     const { heroeId } = useParams();
-    const hero = getHeroeById(heroeId)
+    const hero = useMemo(() => getHeroeById(heroeId), [heroeId])
     const navigate = useNavigate()
 
     const handleReturn = () => {
