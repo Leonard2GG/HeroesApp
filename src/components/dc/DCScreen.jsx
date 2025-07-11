@@ -4,7 +4,7 @@ import { HeroList } from '../hero/HeroList';
 export default function DCScreen() {
     return (
         <>
-            <h1>DC Screen</h1>
+            <h1>DC Heroes</h1>
             <hr />
             <HeroList publisher='DC Comics' />
         </>
