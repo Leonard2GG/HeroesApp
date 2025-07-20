@@ -20,9 +20,9 @@ export default function HeroScreen() {
     return (
         <div className='row mt-2'>
             <div className='col-4'>
-                <img src={imagePath} alt={hero.superhero} onClick={handleReturn} className='img-thumbnail mb-2 btn' />
+                <img src={imagePath} alt={hero.superhero} onClick={handleReturn} className='img-thumbnail mb-2 btn animate__animated animate__fadeInLeft' />
             </div>
-            <div className='col-8'>
+            <div className='col-8 animate__animated animate__fadeInLeft'>
                 <h3>{hero.superhero}</h3>
                 <ul className=' list-group list-group-flush'>
                     <li className='list-group-item'><b className='text-info'>Alter ego:</b> {hero.alter_ego}</li>
