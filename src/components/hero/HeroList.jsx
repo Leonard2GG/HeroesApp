@@ -14,6 +14,6 @@ export function HeroList({ publisher }) {
                     />
                 ))
             }
-        </div >
+        </div>
     )
 }

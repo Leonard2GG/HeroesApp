@@ -7,8 +7,8 @@ export function HeroCard({ id, superhero, alter_ego, first_appearance, character
         navigate(`/hero/${id}`)
     }
     return (
-        <div className='col'>
-            <div className='card'>
+        <div className='col animate__animated animate__fadeIn'>
+            <div className='card '>
                 <img src={`src/assets/${id}.jpg`} className='card-img-top btn' onClick={handleHero} alt={superhero} />
                 <div className='card-body'>
                     <h5 className='card-title'>{superhero}</h5>
