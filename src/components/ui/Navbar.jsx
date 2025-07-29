@@ -68,7 +68,7 @@ export const Navbar = () => {
                     </span>
                     <button
                         className="nav-item nav-link"
-                        to="/login"
+                        to="/"
                         onClick={handleLogout}
                     >
                         Logout
