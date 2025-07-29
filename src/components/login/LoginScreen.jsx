@@ -1,10 +1,19 @@
 import { useNavigate } from 'react-router';
+import { types } from '../../types/types'
+import { useContext } from 'react';
+import { AuthContext } from '../../auth/authContext'
 
 export default function LoginScreen() {
 
     const navigate = useNavigate();
+    const { dispatch } = useContext(AuthContext);
 
     const handleLogin = () => {
+        const action = {
+            type: types.login,
+            payload: { name: 'User' },
+        }
+        dispatch(action);
         navigate('/marvel', {
             replace: true
         });
