@@ -14,7 +14,9 @@ export default function LoginScreen() {
             payload: { name: 'User' },
         }
         dispatch(action);
-        const lastPath = localStorage.getItem('lastPath') || '/marvel'
+
+        const lastPath = localStorage.getItem('lastPath') || '/marvel';
+
         navigate(lastPath, {
             replace: true
         });
